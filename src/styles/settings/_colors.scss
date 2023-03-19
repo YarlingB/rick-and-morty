@@ -1,0 +1,81 @@
+// COLORS
+
+// GENERAL
+$rm-white: #ffffff;
+$rm-black: #000000;
+
+// PRIMARY
+$rm-primary-color: (
+  "0": #d2d2d8,
+  "1": #dad7eb,
+  "2": #9c93c9,
+  "3": #383060,
+  "4": #33344f,
+  "5": #1C1D3B,
+  "6": #191a35,
+  "7": #16172f,
+  "8": #141429,
+  "9": #04061b
+);
+
+$rm-primary: map-get($rm-primary-color, "5");
+$rm-primary-0: map-get($rm-primary-color, "0");
+$rm-primary-1: map-get($rm-primary-color, "1");
+$rm-primary-2: map-get($rm-primary-color, "2");
+$rm-primary-3: map-get($rm-primary-color, "3");
+$rm-primary-4: map-get($rm-primary-color, "4");
+$rm-primary-6: map-get($rm-primary-color, "6");
+$rm-primary-7: map-get($rm-primary-color, "7");
+$rm-primary-8: map-get($rm-primary-color, "8");
+$rm-primary-9: map-get($rm-primary-color, "9");
+
+// SECONDARY
+$rm-secondary-color: (
+  "0": #d1e4e6,
+  "1": #bad7da,
+  "2": #A2F2F9,
+  "3": #a3cacd,
+  "4": #49D5E1,
+  "5": #48959c,
+  "6": #176e76,
+  "7": #156269,
+  "8": #10494f,
+  "9": #0d3d42
+);
+
+$rm-secondary: map-get($rm-secondary-color, "5");
+$rm-secondary-0: map-get($rm-secondary-color, "0");
+$rm-secondary-1: map-get($rm-secondary-color, "1");
+$rm-secondary-2: map-get($rm-secondary-color, "2");
+$rm-secondary-3: map-get($rm-secondary-color, "3");
+$rm-secondary-4: map-get($rm-secondary-color, "4");
+$rm-secondary-6: map-get($rm-secondary-color, "6");
+$rm-secondary-7: map-get($rm-secondary-color, "7");
+$rm-secondary-8: map-get($rm-secondary-color, "8");
+$rm-secondary-9: map-get($rm-secondary-color, "9");
+
+// GREEN
+$rm-green-color: (
+  "0": #eef1b7,
+  "1": #eaeea5,
+  "2": #e5ea93,
+  "3": #e1e781,
+  "4": #d8e05d,
+  "5": #D4DC4B,
+  "6": #c2ca4c,
+  "7": #a1c625,
+  "8": #91b221,
+  "9": #819e1e
+);
+
+$rm-green: map-get($rm-green-color, "5");
+$rm-green-0: map-get($rm-green-color, "0");
+$rm-green-1: map-get($rm-green-color, "1");
+$rm-green-2: map-get($rm-green-color, "2");
+$rm-green-3: map-get($rm-green-color, "3");
+$rm-green-4: map-get($rm-green-color, "4");
+$rm-green-6: map-get($rm-green-color, "6");
+$rm-green-7: map-get($rm-green-color, "7");
+$rm-green-8: map-get($rm-green-color, "8");
+$rm-green-9: map-get($rm-green-color, "9");
+
