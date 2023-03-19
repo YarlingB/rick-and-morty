@@ -1,0 +1,20 @@
+@import "settings/colors";
+@import "settings/borders";
+
+
+.w-sm-80 {
+  width: 80%;
+}
+
+$title-size: 40px;
+$mobile-title-size: 20px;
+
+$screen-mobile-sm: 360px;
+$screen-mobile-md: 480px;
+$screen-tablet: 640px;
+$screen-tablet-md: 1000px;
+
+$padding-sm: 5px;
+$padding-md: 10px;
+$padding-lg: 15px;
+$padding-xl: 25px
