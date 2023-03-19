@@ -1,0 +1,17 @@
+.game_actions{
+  display: flex;
+  &.now_playing {
+    justify-content: center;
+  }
+  &.game_finished {
+    gap: 2rem;
+  }
+}
+.play_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
