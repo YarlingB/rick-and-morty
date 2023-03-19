@@ -3,6 +3,10 @@
 body{
   background-color: $rm-primary-9;
   color: $rm-white;
+  margin: 0;
+	font-family: $font-family_default;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 .w-100{
   width: 100%;

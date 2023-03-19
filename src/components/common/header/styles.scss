@@ -1,0 +1,8 @@
+.logo_wrapper {
+  padding: 1rem;
+  display: flex;
+  .logo {
+    height: 7vmin;
+    pointer-events: none;
+  }
+}

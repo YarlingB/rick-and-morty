@@ -1,0 +1,75 @@
+@import "../../../styles/style.scss";
+
+.rm_button {
+  &:hover{
+    cursor: pointer;
+  }
+  border-radius: $rm-border-xs;
+  color: $rm-white;
+  &.outlined {
+    &.primary{
+      background-color: $rm-primary;
+      border: 0.05rem solid $rm-secondary-3;
+      border-left: 0.2rem solid $rm-secondary-2;
+      border-bottom: 0.2rem solid $rm-secondary-2;
+    }
+    &.secondary{
+      background-color: $rm-primary;
+      border: 0.05rem solid $rm-green-3;
+      border-left: 0.2rem solid $rm-green-2;
+      border-bottom: 0.2rem solid $rm-green-2;
+    }
+    &:hover{
+      color: $rm-black;
+      background-color: $rm-secondary-2;
+      border: 0.05rem solid $rm-green-7;
+      border-left: 0.2rem solid $rm-green-4;
+      border-bottom: 0.2rem solid $rm-green;
+    }
+  }
+  &.contained {
+    border: none;
+    &.primary{
+      background-color: $rm-primary;
+      &:hover{
+        color: $rm-black;
+        background-color: $rm-secondary-4;
+      }
+    }
+    &.secondary{
+      color: $rm-black;
+      background-color: $rm-green;
+      border: 0.05rem solid $rm-secondary-7;
+      border-left: 0.2rem solid $rm-secondary-2;
+      border-bottom: 0.2rem solid $rm-secondary-2;
+      &:hover{
+        background-color: $rm-secondary-2;
+        border: 0.05rem solid $rm-green-7;
+        border-left: 0.2rem solid $rm-green-4;
+        border-bottom: 0.2rem solid $rm-green-4;
+      }
+    }    
+  }
+  &.sm{
+    *{
+      padding: 0.5rem;
+    }
+  }
+  &.md{
+      *{
+      padding: 0.8rem 3.5rem;
+    }
+  }
+  &.lg{
+    *{
+      padding: 0.5rem;
+    }
+  }
+  &.none {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: 1px solid transparent;
+    color: white;
+  }
+}
