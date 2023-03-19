@@ -1,0 +1,69 @@
+@import '../../../styles/style.scss';
+
+.section__banner {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	overflow: hidden;
+	background: #243a5a;
+	min-height: 100vh;
+	height: auto;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: linear-gradient(to left, rgba(9, 32, 47, 0.528) 0vw, rgb(10 17 28 / 82%) 100%);
+		z-index: 1;
+	}
+}
+.section_main_img {
+	position: absolute;
+	right: 0;
+	width: 100vw;
+	height: 100%;
+}
+.section_image {
+	right: 0px;
+	height: 100%;
+	overflow: hidden;
+	pointer-events: none;
+	background-position: 50% 0;
+	position: absolute;
+	width: 100vw;
+}
+.section__img {
+	overflow: hidden;
+	pointer-events: none;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.section__banner__div {
+	color: $rm-white;
+	position: relative;
+	font-size: 2.2em;
+	left: 15px;
+	top: 5rem;
+	width: 100%;
+	z-index: 2;
+}
+.section_banner__h1 {
+	display: inline-block;
+	padding: 5px 40px;
+	border-radius: 10px;
+	text-align: center;
+	background: radial-gradient(circle, rgb(0 0 0 / 70%) 0, rgba(252, 70, 107, 0.00183824) 100%)
+}
+@media (max-width: 540px) {
+	.section_banner__h1 {
+		font-size: 20px;
+	}
+	.section_main_img {
+		width: 100vw;
+	}
+}
