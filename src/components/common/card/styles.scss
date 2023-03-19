@@ -1,0 +1,11 @@
+@import "../../../styles/style";
+
+.rm-card-item {
+	border-radius: $rm-border-s;
+	box-shadow: 2px 3px 5px $rm-primary-6;
+	border: 1px solid $rm-secondary-6;
+	&:hover{
+	box-shadow: 8px 7px 10px $rm-secondary-6;
+	border: 1px solid $rm-secondary-6;
+	}
+}
