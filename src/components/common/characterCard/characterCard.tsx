@@ -14,6 +14,7 @@ interface IRMCharacterCard {
   name: string;
   species: string;
   status: string;
+  keyName: string;
   className?: string;
   isCardDown?: boolean;
   handleOnClick?: Function;
@@ -23,6 +24,7 @@ const RMCharacterCard = ({
   image,
   name,
   species,
+  keyName,
   status,
   className = '',
   isCardDown = false,
@@ -82,11 +84,11 @@ const RMCharacterCard = ({
     <>
       {cardFound && (
         <>
-          <section className={`found_character`} />
+          <section key={`section-${keyName}`} className={`found_character`} />
         </>
       )}
       {!cardFound && (
-        <RMCard className={className}>
+        <RMCard className={className} keyName={`card-${keyName}`}>
           <RMButton
             className='w-100 h-100'
             variant='none'

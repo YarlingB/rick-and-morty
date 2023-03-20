@@ -90,6 +90,7 @@ const SetUpGame = ({ characters, addNewShift, setNewHit }: ISetUpGameProps) => {
         randomCards.map(({ name, image, species, status, id }, index) => (
           <>
             <RMCharacterCard
+              keyName={`play-card-${index}`}
               id={id}
               className='single_character'
               isCardDown={cardDown}

@@ -7,6 +7,7 @@ export interface IChildrenNode {
 }
 export interface IChildrenStyleProps {
   children: ReactNode;
+  keyName: string;
   className?: string;
 }
 

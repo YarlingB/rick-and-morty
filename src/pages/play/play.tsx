@@ -22,6 +22,7 @@ import { TOTAL_CHARACTERS } from 'utils/constants';
 import './styles.scss';
 import { useNavigate } from 'react-router-dom';
 import ROUTES from 'routes/routes';
+import CardSkeleton from 'components/common/skeleton/cardSkeleton/cardSkeleton';
 
 const PlayPage = () => {
   const navigate = useNavigate();
@@ -65,23 +66,21 @@ const PlayPage = () => {
 
   return (
     <>
-      {loading || error ? (
-        <>
-          <p>Error</p>
-        </>
-      ) : (
-        <RMCharactersWrapper characters={rmCharacters}>
-          <RMCharactersHeader>
-            <>
-              {!isGameFinished && (
-                <section className='play_header'>
-                  <p>Aciertos: {hits}</p>
-                  <p>Turnos: {quantityOfShifts}</p>
-                </section>
-              )}
-            </>
-          </RMCharactersHeader>
-          <RMCharactersContent>
+      <RMCharactersWrapper characters={rmCharacters}>
+        <RMCharactersHeader>
+          <>
+            {!isGameFinished && (
+              <section className='play_header'>
+                <p>Aciertos: {hits}</p>
+                <p>Turnos: {quantityOfShifts}</p>
+              </section>
+            )}
+          </>
+        </RMCharactersHeader>
+        <RMCharactersContent>
+          {loading || error ? (
+            <CardSkeleton />
+          ) : (
             <>
               {rmCharacters && !isGameFinished && (
                 <SetUpGame
@@ -92,35 +91,35 @@ const PlayPage = () => {
               )}
               {isGameFinished && <GameFinished />}
             </>
-          </RMCharactersContent>
-          <RMCharactersFooter>
-            <section
-              className={`game_actions ${
-                !isGameFinished ? 'now_playing' : 'game_finished'
-              }`}
-            >
-              {isGameFinished && (
-                <RMButton
-                  className='play_button'
-                  variant='contained'
-                  color='secondary'
-                  onClick={handleRepeatAgain}
-                >
-                  <p>Repetir</p>
-                </RMButton>
-              )}
+          )}
+        </RMCharactersContent>
+        <RMCharactersFooter>
+          <section
+            className={`game_actions ${
+              !isGameFinished ? 'now_playing' : 'game_finished'
+            }`}
+          >
+            {isGameFinished && (
               <RMButton
-                onClick={handleGoHome}
                 className='play_button'
-                variant='outlined'
-                color='primary'
+                variant='contained'
+                color='secondary'
+                onClick={handleRepeatAgain}
               >
-                <p>{isGameFinished ? 'Inicio' : 'Volver'}</p>
+                <p>Repetir</p>
               </RMButton>
-            </section>
-          </RMCharactersFooter>
-        </RMCharactersWrapper>
-      )}
+            )}
+            <RMButton
+              onClick={handleGoHome}
+              className='play_button'
+              variant='outlined'
+              color='primary'
+            >
+              <p>{isGameFinished ? 'Inicio' : 'Volver'}</p>
+            </RMButton>
+          </section>
+        </RMCharactersFooter>
+      </RMCharactersWrapper>
     </>
   );
 };

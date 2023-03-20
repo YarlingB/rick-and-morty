@@ -13,6 +13,7 @@ import RMCharactersContent from 'components/common/charactersWrapper/charactersC
 import RMCharacterCard from 'components/common/characterCard/characterCard';
 import logo from '../../assets/rick-morty-logo.svg';
 import './styles.scss';
+import CardSkeleton from 'components/common/skeleton/cardSkeleton/cardSkeleton';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -43,19 +44,20 @@ const HomePage = () => {
           </RMButton>
         </section>
       </RMBanner>
-      {loading || error !== undefined ? (
-        <p>Something went wrong</p>
-      ) : (
-        <section className='characters_section' ref={ref}>
-          <RMCharactersWrapper characters={rmCharacters}>
-            <RMCharactersHeader>
-              <p className='card_title'>Personajes</p>
-            </RMCharactersHeader>
-            <RMCharactersContent>
-              {rmCharacters.map(({ name, image, species, status, id }) => (
+      <section className='characters_section' ref={ref}>
+        <RMCharactersWrapper characters={rmCharacters}>
+          <RMCharactersHeader>
+            <p className='card_title'>Personajes</p>
+          </RMCharactersHeader>
+          <RMCharactersContent>
+            {loading || error ? (
+              <CardSkeleton />
+            ) : (
+              rmCharacters.map(({ name, image, species, status, id }, idx) => (
                 <>
                   <RMCharacterCard
                     id={id}
+                    keyName={`home-card-${idx}`}
                     className='single_character'
                     image={image}
                     name={name}
@@ -64,6 +66,7 @@ const HomePage = () => {
                   />
                   <RMCharacterCard
                     id={id}
+                    keyName={`clone-card-${idx}`}
                     className='single_character'
                     image={image}
                     name={name}
@@ -71,21 +74,21 @@ const HomePage = () => {
                     status={status}
                   />
                 </>
-              ))}
-            </RMCharactersContent>
-            <RMCharactersFooter>
-              <RMButton
-                onClick={handlePlayClick}
-                className='play_button'
-                variant='outlined'
-                color='primary'
-              >
-                <p>JUGAR</p>
-              </RMButton>
-            </RMCharactersFooter>
-          </RMCharactersWrapper>
-        </section>
-      )}
+              ))
+            )}
+          </RMCharactersContent>
+          <RMCharactersFooter>
+            <RMButton
+              onClick={handlePlayClick}
+              className='play_button'
+              variant='outlined'
+              color='primary'
+            >
+              <p>JUGAR</p>
+            </RMButton>
+          </RMCharactersFooter>
+        </RMCharactersWrapper>
+      </section>
     </>
   );
 };
