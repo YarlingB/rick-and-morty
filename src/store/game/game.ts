@@ -20,7 +20,7 @@ export const gameSlice = createSlice({
   name: 'gameSlice',
   initialState: initialStateGame,
   reducers: {
-    finishGame: (state, action: PayloadAction<IGameFinished>) => {
+    finishGame: (state: IGameStore, action: PayloadAction<IGameFinished>) => {
       state.gameFinished = true;
       state.gameStarted = false;
       state.gameShifts = action.payload.shifts;

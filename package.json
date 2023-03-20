@@ -8,7 +8,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
+    "@types/jest": "^29.5.0",
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
@@ -27,6 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "jest --coverage --watch --config=jest.setup.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -46,5 +47,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cross-fetch": "^3.1.5",
+    "jest-transform-stub": "^2.0.0",
+    "msw": "^1.1.0",
+    "ts-jest": "^29.0.5"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
