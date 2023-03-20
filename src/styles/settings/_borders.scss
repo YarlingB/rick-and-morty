@@ -1,0 +1,16 @@
+// BORDER RADIOUS 
+
+// PRIMARY
+$rm-border-list: (
+  "xs": 0.625rem,
+  "s": 1.5rem,
+  "m": 2.0rem,
+  "l": 2.5rem,
+  "xl": 3rem,
+);
+
+$rm-border-xs: map-get($rm-border-list, "xs");
+$rm-border-s: map-get($rm-border-list, "s");
+$rm-border-m: map-get($rm-border-list, "m");
+$rm-border-l: map-get($rm-border-list, "l");
+$rm-border-xl: map-get($rm-border-list, "xl");
