@@ -1,36 +1,31 @@
 # Rick and Morty challenge
 
-This project is a memory challenge of the Rick and Morty characters
+Juego de memoria de los personajes de Rick y Morty
 
-## Available Scripts
+## App Flow
 
-In the project directory, you can run:
+Se tomó como base lógica para el desarrollo del proyecto el siguiente diagrama \
+donde se reflejan las acciones y reglas.
+![Diagrama](https://user-images.githubusercontent.com/19624710/226261274-3055b29d-2648-4ef6-8cc8-3e27e15b8ed9.png)
+
+Diagrama realizado en [Miro](https://miro.com/)
+
+## Standards
+
+- Convención de nomenclatura de archivos: camel case
+- Los nombres de componentes comunes deben comenzar con RM, por ejemplo, RMHeader
+- Los nombres de las variables sass debe comenzar con rm-name, por ejemplo, rm-white
+
+## Scripts
+
+Scripts disponibles
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
 ### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `yarn test:coverage`
 
 ## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
